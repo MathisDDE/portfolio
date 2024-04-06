@@ -25,6 +25,240 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
+/* Styles de base pour la section BTS SIO */
+#bts-sio {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#bts-sio .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#bts-sio .section-heading h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#bts-sio .text-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#bts-sio .text-center p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styles pour les options SISR et SLAM */
+.options-overview .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.options-overview .col-half {
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.options-overview h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.options-overview p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .options-overview .row {
+        flex-direction: column;
+    }
+
+    .options-overview .col-half {
+        margin: 10px auto;
+    }
+}
+
+/* Styles pour la rubrique Veille Technologique */
+#clients {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#clients .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+#clients .section-heading {
+    margin-bottom: 30px;
+}
+
+#clients .section-heading h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#clients .text-center p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#clients .text-center h2 a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#clients .text-center h2 a:hover {
+    background-color: #0056b3;
+}
+
+#certification {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#certification .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+#certification .section-heading {
+    margin-bottom: 30px;
+}
+
+#certification .section-heading h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#certification .text-center p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#certification .text-center h2 a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#certification .text-center h2 a:hover {
+    background-color: #0056b3;
+}
+.project-card {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-info {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.project-info, .project-info p, h3 {
+    color: white; /* Assure que le texte et les liens sont en blanc */
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
+.project-description p{
+    color: #007bff; /* Couleur bleue par défaut des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease-in-out; /* Transition douce pour le changement de couleur */
+    font-weight: bold; /* Rend le texte des liens plus gras */
+
+    padding: 5px 10px; /* Ajoute un peu d'espace autour du texte des liens */
+    border-radius: 5px; /* Arrondit les bords du fond */
+
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'écran est trop petit */
+    justify-content: space-between; /* Ajuste l'espace entre les éléments de manière équitable */
+}
+
+.project-container {
+    flex: 1; /* Donne la possibilité à chaque projet de grandir et de remplir l'espace disponible */
+    max-width: 31%; /* Limite la largeur de chaque projet à environ un tiers de la largeur du conteneur parent */
+    margin: 0 1%; /* Ajoute un petit espace entre les projets */
+}
+
+
+
+
+.project-card {
+    width: 100%; /* Assure que la carte utilise toute la largeur du conteneur du projet */
+    /* Votre style existant pour .project-card ici */
+}
+
+.full-width-image {
+  width: 100%; /* Fait en sorte que l'image prenne toute la largeur de son conteneur */
+  height: auto; /* Assure que la hauteur de l'image s'adapte pour maintenir les proportions */
+  display: block; /* Élimine tout espace blanc sous l'image */
+  object-fit: cover; /* Assure que l'image couvre l'espace disponible sans déformation */
+}
+
 *{
     padding: 0;
     margin: 0;
